@@ -22,6 +22,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Hackathon2019", "..\..\..\P
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "4445"
 		VWDDynamicPort = "false"
+		SlnRelativePath = "..\..\..\Program Files\Acumatica ERP\Hackathon2019\"
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicRoles", "DynamicRoles\DynamicRoles.csproj", "{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}"
