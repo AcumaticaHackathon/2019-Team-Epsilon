@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Examples.cs" />
     <Compile Include="ESDyanmicRole.cs" />
+<Compile Include="RoleAccess.cs" />
 <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
