@@ -57,7 +57,6 @@ namespace DynamicRoles
 
             this.ResetAccessForUsers(users);
 
-            Base.Save.Press();
             return adapter.Get();
         }
 

@@ -35,7 +35,8 @@ namespace DynamicRoles
                 graph.Clear();
                 graph.Roles.Current = role;
                 RoleAccess_Extension graphExt = graph.GetExtension<RoleAccess_Extension>();
-                graphExt.eSResetDynamicAccess.Press(); 
+                graphExt.eSResetDynamicAccess.Press();
+                graph.Save.Press();
                 System.Threading.Thread.Sleep(100);
             });
         }
