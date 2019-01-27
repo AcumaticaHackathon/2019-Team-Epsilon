@@ -25,8 +25,19 @@
         </layout>
         <data>
             <SiteMap>
-                <row Position="2022" Title="Process Dynamic Roles" Url="~/Pages/ES/ES500000.aspx" Expanded="0" IsFolder="0" ScreenID="ES500000" NodeID="d8c5b7dd-a5cf-48bf-8cc3-c80b31c456aa" ParentID="dd08e18d-ca84-4f12-872b-77989094f44e" />
+                <row Position="2022" Title="Process Dynamic Roles" Url="~/Pages/ES/ES500000.aspx" Expanded="0" IsFolder="0" ScreenID="ES500000" NodeID="d8c5b7dd-a5cf-48bf-8cc3-c80b31c456aa" ParentID="dd08e18d-ca84-4f12-872b-77989094f44e">
+                    <MUIScreen IsPortal="0" WorkspaceID="9260e24b-7d67-4ec6-8073-f95df4d24075" Order="20" SubcategoryID="32130442-2305-4394-9389-cf915b191d2a" />
+                </row>
             </SiteMap>
+            <MUIWorkspace>
+                <row IsPortal="0" WorkspaceID="9260e24b-7d67-4ec6-8073-f95df4d24075" Order="785" Title="User Security" Icon="security" AreaID="3635ea7d-0975-48ff-b4ac-a870f7e1e8b5" ScreenID="WSUS0000" IsSystem="0" />
+            </MUIWorkspace>
+            <MUISubcategory>
+                <row IsPortal="0" SubcategoryID="32130442-2305-4394-9389-cf915b191d2a" Order="820" Name="Processes" Icon="" IsSystem="0" />
+            </MUISubcategory>
+            <MUIArea>
+                <row IsPortal="0" AreaID="3635ea7d-0975-48ff-b4ac-a870f7e1e8b5" Order="30" Name="Configuration" />
+            </MUIArea>
         </data>
     </data-set>
 </SiteMapNode>
