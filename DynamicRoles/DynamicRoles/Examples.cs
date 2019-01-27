@@ -66,5 +66,7 @@ namespace MyProject
 	public class MyCustomTable : IBqlTable
 	{
 	}
-	#endregion
+    #endregion
+
+   
 }

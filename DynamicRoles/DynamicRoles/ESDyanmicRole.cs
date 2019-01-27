@@ -1,34 +1,41 @@
 using System;
 using PX.Data;
+using PX.Data.Maintenance.GI;
+using PX.SM;
 
 namespace DynamicRoles
 {
-  [Serializable]
-  public class ESDyanmicRole : IBqlTable
-  {
-    #region DynamicRoleID
-    [PXDBInt(IsKey = true)]
-    [PXUIField(DisplayName = "Dynamic Role ID")]
-    public virtual int? DynamicRoleID { get; set; }
-    public abstract class dynamicRoleID : IBqlField { }
-    #endregion
+    [Serializable]
+    public class ESDynamicRole : IBqlTable
+    {
+        #region DynamicRoleID
+        [PXInt(IsKey = true)]
+        [PXUIField(DisplayName = "Dynamic Role ID")]
+        public virtual int? DynamicRoleID { get; set; }
+        public abstract class dynamicRoleID : IBqlField { }
+        #endregion
 
 
-    #region Rolename
-    [PXDBString(64, IsUnicode = true, InputMask = "")]
-    [PXUIField(DisplayName = "Rolename")]
-    public virtual string Rolename { get; set; }
-    public abstract class rolename : IBqlField { }
-    #endregion
+        #region Rolename
+        [PXDBString(64, IsUnicode = true, InputMask = "")]
+        [PXUIField(DisplayName = "Rolename")]
+        [PXDBDefault(typeof(Roles.rolename))]
+        [PXParent(typeof(Select<Roles,
+            Where<Roles.rolename, Equal<Current<Roles.rolename>>>>))]
+        public virtual string Rolename { get; set; }
+        public abstract class rolename : IBqlField { }
+        #endregion
 
-    #region DesignID
-    [PXDBInt()]
-    [PXUIField(DisplayName = "Design ID")]
-    public virtual int? DesignID { get; set; }
-    public abstract class designID : IBqlField { }
-    #endregion
-      
-              #region CreatedByID
+
+        #region DesignID
+        [PXDBGuid ()]
+        [PXUIField(DisplayName = "Generic Inquiry")]
+        [PXSelector(typeof(Search<GIDesign.designID>), typeof(GIDesign.name), SubstituteKey = typeof(GIDesign.name))]
+        public virtual Guid? DesignID { get; set; }
+        public abstract class designID : IBqlField { }
+        #endregion
+
+        #region CreatedByID
         public abstract class createdByID : PX.Data.IBqlField
         {
         }
@@ -174,5 +181,5 @@ namespace DynamicRoles
             }
         }
         #endregion
-  }
+    }
 }

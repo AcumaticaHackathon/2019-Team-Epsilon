@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\..\Program Files\Acumatica ERP\Hackathon2019\Bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Examples.cs" />
     <Compile Include="ESDyanmicRole.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="RoleAccess_Extension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
