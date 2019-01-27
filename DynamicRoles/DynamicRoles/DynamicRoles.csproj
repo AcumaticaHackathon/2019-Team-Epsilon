@@ -61,6 +61,8 @@
     <Compile Include="ESDyanmicRole.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="RoleAccess_Extension.cs" />
+    <Compile Include="GenericInquiryDesigner.cs" />
+    <Compile Include="GIDesignExt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

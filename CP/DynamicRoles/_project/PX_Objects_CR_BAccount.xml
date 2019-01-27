@@ -1,0 +1,7 @@
+﻿<DAC type="PX.Objects.CR.BAccount">
+    <Field FieldName="UsrJobTitle" TypeName="string" MapDbTable="BAccount" TextAttributes="#CDATA" StorageName="AddColumn">
+        <CDATA name="TextAttributes"><![CDATA[[PXDBString(255)]
+[PXUIField(DisplayName="Job Title")]
+]]></CDATA>
+    </Field>
+</DAC>
