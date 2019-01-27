@@ -59,7 +59,8 @@
   <ItemGroup>
     <Compile Include="Examples.cs" />
     <Compile Include="ESDyanmicRole.cs" />
-    <Compile Include="Extensions.cs" />
+    <Compile Include="UsersInRoleExt.cs" />
+    <Compile Include="_Helpers\Extensions.cs" />
     <Compile Include="RoleAccess_Extension.cs" />
     <Compile Include="GenericInquiryDesigner.cs" />
     <Compile Include="GIDesignExt.cs" />
