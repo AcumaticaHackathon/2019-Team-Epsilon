@@ -59,6 +59,7 @@ namespace DynamicRoles
 
             this.ResetAccessForUsers(users);
 
+            Base.Save.Press();
             return adapter.Get();
         }
 
@@ -112,8 +113,9 @@ namespace DynamicRoles
                     continue;
 
                 UsersInRoles newUser = Base.UsersByRole.Insert();
+
                 Base.UsersByRole.SetValueExt<UsersInRoles.username>(newUser, user.Username);
-                Base.UsersByRole.Update(newUser);
+                //Base.UsersByRole.Update(newUser);
             }
         }
     }
