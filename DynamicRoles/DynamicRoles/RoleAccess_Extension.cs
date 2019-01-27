@@ -13,8 +13,6 @@ namespace DynamicRoles
 {
     public class RoleAccess_Extension : PXGraphExtension<RoleAccess>
     {
-        private const string ANONYMOUS_USERNAME = "Anonymous";
-
         public PXSelect<ESDynamicRole, Where<ESDynamicRole.rolename, Equal<Current<Roles.rolename>>>> DynamicAccess;
 
         public PXAction<Roles> eSResetDynamicAccess;
@@ -74,8 +72,9 @@ namespace DynamicRoles
             //remove users which exist on screen but do not exist in the new list
 
             List<UsersInRoles> usersToRemove =
-                usersInRoleList.Where(u => !users
-                    .Any(r => string.Equals(r.Username, u.Username))).ToList();
+                usersInRoleList.Where(u => 
+                u.GetExtension<UsersInRolesExt>().UsrESDirectAssigned != true
+                && !users.Any(r => string.Equals(r.Username, u.Username))).ToList();
 
             foreach (UsersInRoles user in usersToRemove)
             {
@@ -108,11 +107,9 @@ namespace DynamicRoles
 
             foreach (Users user in newUsrsToAdd)
             {
-                if (string.Equals(user.Username, ANONYMOUS_USERNAME))
-                    continue;
-
                 UsersInRoles newUser = Base.UsersByRole.Insert();
                 Base.UsersByRole.SetValueExt<UsersInRoles.username>(newUser, user.Username);
+                Base.UsersByRole.SetValueExt<UsersInRolesExt.usrESDirectAssigned>(newUser, false);
                 Base.UsersByRole.Update(newUser);
             }
         }

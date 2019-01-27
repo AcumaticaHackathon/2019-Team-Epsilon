@@ -34,4 +34,15 @@
             </AddItem>
         </Children>
     </PXTab>
+    <PXGridLevel DataMember="UsersByRole" ParentId="phG_tab_Items#0_grid_Levels#0" TypeFullName="PX.Web.UI.PXGridLevel">
+        <Children Key="Columns">
+            <AddItem>
+                <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
+                    <Prop Key="DataField" Value="UsrESDirectAssigned" />
+                    <Prop Key="Width" Value="60" />
+                </PXGridColumn>
+            </AddItem>
+            <PXGridColumn DataField="Domain" OriginalIndex="5" />
+        </Children>
+    </PXGridLevel>
 </Page>
