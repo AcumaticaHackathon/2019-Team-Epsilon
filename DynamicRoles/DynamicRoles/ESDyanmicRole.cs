@@ -30,7 +30,8 @@ namespace DynamicRoles
         #region DesignID
         [PXDBGuid ()]
         [PXUIField(DisplayName = "Generic Inquiry")]
-        [PXSelector(typeof(Search<GIDesign.designID>), typeof(GIDesign.name), SubstituteKey = typeof(GIDesign.name))]
+        [PXSelector(typeof(Search<GIDesign.designID,
+               Where<GIDesignExt.usrESIsDynamicRole,Equal<True>>>), typeof(GIDesign.name), SubstituteKey = typeof(GIDesign.name))]
         public virtual Guid? DesignID { get; set; }
         public abstract class designID : IBqlField { }
         #endregion
